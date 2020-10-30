@@ -14,10 +14,10 @@ class Home extends React.Component {
       <Layout location="/">
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          title="Gatsby Starter - Landed"
+          title="psychiatr.ai - Effective mental healthcare at scale"
           meta={[
-            { name: 'description', content: 'Landed Gatsby Starter' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'psychiatr.ai - Effective mental healthcare at scale' },
+            { name: 'keywords', content: 'psychiatrai, psychiatry, psychology, mental health, mental illness' },
           ]}
         ></Helmet>
         <Banner />
