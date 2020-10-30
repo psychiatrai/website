@@ -9,7 +9,7 @@ Built using gatsby-starter-landed.
 6. Photo by [Josh Riemer](https://unsplash.com/@joshriemer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
 
----
+```
 # gatsby-starter-landed
 
 **This is a starter for Gatsby.js V2.**
@@ -27,4 +27,4 @@ Install this starter :
 `gatsby new gatsby-starter-landed https://github.com/vasrush/gatsby-starter-landed`
 
 Run `gatsby develop` to start the dev site or `gatsby build` to build it for production.
----
+```
