@@ -29,7 +29,7 @@ const Footer = props => (
         </a>
       </li>
       <li>
-        <a href="infopsychiatrai@gmail.com" className="icon solid alt fa-envelope">
+        <a href="mailto:infopsychiatrai@gmail.com" className="icon solid alt fa-envelope">
           <span className="label">Email</span>
         </a>
       </li>
