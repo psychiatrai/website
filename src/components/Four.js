@@ -6,7 +6,7 @@ const Four = props => (
     <section id="four" className="wrapper style1 special fade-up">
       <div className="container">
         <header className="major">
-          <h2>Accumsan sed tempus adipiscing blandit</h2>
+          <h2>We will work on this section later :)</h2>
           <p>
             Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu
             consequat

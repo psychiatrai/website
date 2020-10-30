@@ -1,5 +1,5 @@
 import React from 'react'
-import pic03 from '../assets/images/pic03.jpg'
+import pic03 from '../assets/images/flower.jpg'
 import { Link as ScrollLink } from 'react-scroll'
 import Fade from 'react-reveal/Fade'
 
@@ -15,22 +15,24 @@ const Two = props => (
     <Fade right big>
       <div className="content">
         <header>
-          <h2>Interdum amet non magna accumsan</h2>
-          <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+          <h2>Proposed approach</h2>
+          <p>A hierarchical platform which allows users to access different levels
+            of help based on their need
+          </p>
         </header>
         <p>
-          Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim
-          mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet
-          augue varius tempus lobortis porttitor lorem et accumsan consequat
-          adipiscing lorem.
+          Cognitive Behavioral Therapy (CBT) has proven to be an effective method
+          to reduce symptoms of various mental and physical health issues. Guided CBT
+          has the additional advantage to increase retention rate
+          throughout the programs.
         </p>
-        <ul className="actions">
-          <li>
-            <a href="/" className="button">
-              Learn More
-            </a>
-          </li>
-        </ul>
+        <p>
+          Community and integration are other significant predictors of well-being, and the
+          lack of these can lead to significant misery. We aim to integrate these in a 
+          single platform, where people can seek help comfortably, without having to
+          worry about their finances or communal stigma, and while building a 
+          community and support system throughout this.
+        </p>
       </div>
     </Fade>
     <ScrollLink

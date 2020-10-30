@@ -1,5 +1,5 @@
 import React from 'react'
-import pic04 from '../assets/images/pic04.jpg'
+import pic04 from '../assets/images/dreams.jpg'
 import { Link as ScrollLink } from 'react-scroll'
 import Fade from 'react-reveal/Fade'
 
@@ -15,22 +15,26 @@ const Three = props => (
     <Fade left big>
       <div className="content">
         <header>
-          <h2>Interdum felis blandit praesent sed augue</h2>
-          <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+          <h2>Who are we</h2>
+          <p>A diverse team of people from various backgrounds interested
+            in contributing positively to the world.
+          </p>
         </header>
         <p>
-          Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim
-          mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet
-          augue varius tempus lobortis porttitor lorem et accumsan consequat
-          adipiscing lorem.
+          <ul>
+            <li>Salman Maqbool</li>
+            <li>Zi Qi Kok</li>
+            <li>Ahmad Mansoor</li>
+            <li>Hamid Gilani</li>
+          </ul>
+          Together we have a background in computer science, machine learning, 
+          artificial intelligence, medicine, neuroscience, neurology, cognitive science, 
+          development economics, behavioral economics.
         </p>
-        <ul className="actions">
-          <li>
-            <a href="/" className="button">
-              Learn More
-            </a>
-          </li>
-        </ul>
+        <p>
+          We are curious people who want to understand ourselves and the world
+          around us, and helping out those not as priveleged as we have been.
+        </p>
       </div>
     </Fade>
     <ScrollLink

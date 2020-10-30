@@ -1,5 +1,5 @@
 import React from 'react'
-import pic02 from '../assets/images/pic02.jpg'
+import pic02 from '../assets/images/two-hands.jpg'
 import { Link as ScrollLink } from 'react-scroll'
 import Fade from 'react-reveal/Fade'
 
@@ -18,28 +18,35 @@ const One = props => (
           <div className="row">
             <div className="col-4 col-12-medium">
               <header>
-                <h2>Odio faucibus ipsum integer consequat</h2>
+                <h2>About Us</h2>
                 <p>
-                  Nascetur eu nibh vestibulum amet gravida nascetur praesent
+                  We believe that mental health has reached epidemic status
+                  globaly, and that people deserve more support no matter
+                  what their circumstances.
                 </p>
               </header>
             </div>
             <div className="col-4 col-12-medium">
               <p>
-                Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-                Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-                nisi praesent dolor adipiscing. Integer mi sed nascetur cep
-                aliquet augue varius tempus lobortis porttitor accumsan
-                consequat adipiscing lorem dolor.
+                We are a work-in-progress non-profit startup where we aim to
+                do the most good through 
+                following <a href="https://www.effectivealtruism.org/">Effective Altruism</a> principles 
+                to try and deliver evidence-based mental health interventions
+                at scale digitally. We would later like to scale to non-digital solutions
+                as well to cater to nearly half of the world population without internet access.
+                Current solutions in the digital mental health space do not cater to complex, 
+                difficult-to-treat disorders. 
               </p>
             </div>
             <div className="col-4 col-12-medium">
               <p>
-                Morbi enim nascetur et placerat lorem sed iaculis neque ante
-                adipiscing adipiscing metus massa. Blandit orci porttitor
-                semper. Arcu phasellus tortor enim mi mi nisi praesent
-                adipiscing. Integer mi sed nascetur cep aliquet augue varius
-                tempus. Feugiat lorem ipsum dolor nullam.
+                
+                Considering <a href="https://www.youtube.com/watch?v=IeD3nZX1Sr4">Logarithmic scales of pleasure and pain</a>, we 
+                think that such disorders cause much more suffering and pain, and thus warrant our attention and efforts. 
+                While we would likely start with something less ambitious, 
+                our aim is to develop a solution which caters to everyone 
+                in need of help, support, and care;
+                while adopting a user-centered agile development approach.
               </p>
             </div>
           </div>

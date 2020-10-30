@@ -12,29 +12,15 @@ const Layout = ({ children, ...props }) => (
           siteMetadata {
             title
             description
-            menuLinks {
-              name
-              link
-              cl
-              items {
-                link
-                name
-                items {
-                  link
-                  name
-                }
-              }
-            }
           }
         }
       }
     `}
     render={data => (
       <React.Fragment>
-        <div className={props.location == '/' ? 'landing' : ''}>
+        <div className={props.location === '/' ? 'landing' : ''}>
           <div id="page-wrapper">
             <Header
-              menuLinks={data.site.siteMetadata.menuLinks}
               siteTitle={data.site.siteMetadata.title}
             />
             {children}

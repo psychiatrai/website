@@ -6,8 +6,12 @@ const Five = props => (
     <Fade duration={2500}>
       <div className="container">
         <header>
-          <h2>Magna faucibus lorem diam</h2>
-          <p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+          <h2>Sign up to hear from us!</h2>
+          <p>
+            Unfortunately, this functionality is not currently implemented. 
+            However, we encourage you to get in touch through email (check out the email icon below) if
+            you would like to discuss anything.
+          </p>
         </header>
         <form method="post" action="#" className="cta">
           <div className="row gtr-uniform gtr-50">
@@ -25,7 +29,7 @@ const Five = props => (
                 aria-label="Submit the form"
                 id="submitForm"
                 type="submit"
-                value="Get Started"
+                value="Sign Up"
                 className="fit primary"
               />
             </div>
