@@ -21,7 +21,7 @@ const One = props => (
                 <h2>About Us</h2>
                 <p>
                   We believe that mental health has reached epidemic status
-                  globaly, and that people deserve more support no matter
+                  globally, and that people deserve more support no matter
                   what their circumstances.
                 </p>
               </header>
