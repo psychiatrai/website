@@ -24,7 +24,6 @@ const Three = props => (
           <ul>
             <li>Salman Maqbool</li>
             <li>Zi Qi Kok</li>
-            <li>Ahmad Mansoor</li>
             <li>Hamid Gilani</li>
           </ul>
           Together we have a background in computer science, machine learning, 
