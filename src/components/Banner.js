@@ -9,7 +9,7 @@ const Banner = props => (
         <h2>psychiatr.ai</h2>
         <p>
           Accessible mental health care for all.<br></br>
-          Evidence-based, guided, community.
+          Evidence-based, guided, community-building.
         </p>
       </header>
       <span className="image">
