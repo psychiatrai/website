@@ -1,0 +1,13 @@
+[build]
+  command = "next build"
+  publish = ".next"
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://ec2-52-87-213-71.compute-1.amazonaws.com:8000/"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
