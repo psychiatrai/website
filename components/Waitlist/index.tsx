@@ -129,7 +129,7 @@ const Waitlist = () => {
             </h2>
             <p className="mb-12 text-base font-medium text-body-color">
               Please fill out the form below to be added to our waitlist. We'll get back to you ASAP.
-              Filling in the optional questions can help in qualofying for early access and its associated perks.
+              Filling in the optional questions can help in qualifying for early access and its associated perks.
             </p>
             <form onSubmit={(e) => { e.preventDefault(); submitWaitlistData(); }}>
               <div className="-mx-4 flex flex-wrap">
