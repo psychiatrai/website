@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from 'react';
+import Modal from '../Common/Modal';
 
 function debounce(func, delay) {
   let timer;
@@ -21,6 +22,8 @@ const Waitlist = () => {
   const [setup, setSetup] = useState('');
   const [suggestions, setSuggestions] = useState('');
   const [education, setEducation] = useState('');
+  const [modalMessage, setModalMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const handleRoleChange = (newRole: string) => {
     setRole(newRole);
@@ -107,17 +110,21 @@ const Waitlist = () => {
 
       const result = await response.json();
       if (response.ok) {
-        alert(result.message);
+        setModalMessage(result.message);
       } else {
-        alert(result.detail || 'An error occurred');
+        setModalMessage(result.detail || 'An error occurred');
       }
     } catch (error) {
       console.error('Error submitting waitlist data:', error);
+      setModalMessage('An unexpected error occurred.');
+    } finally {
+      setShowModal(true);
     }
   };
 
   return (
     <section id="waitlist" className="overflow-hidden py-16 md:py-20 lg:py-28 px-4 lg:px-8">
+      <Modal show={showModal} message={modalMessage} onClose={() => setShowModal(false)} />
       <div className="container">
         <div className="w-full px-4 lg:w-22/24 xl:w-23/24">
           <div
