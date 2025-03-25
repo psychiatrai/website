@@ -26,7 +26,11 @@ const Video = () => {
               data-wow-delay=".15s"
             >
               <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/psychiatrai-video-thumbnail.png" alt="video image" fill />
+                <Image
+                  src="/images/video/psychiatrai-video-thumbnail.png"
+                  alt="video image"
+                  fill
+                />
                 <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
                   <button
                     onClick={() => setOpen(true)}
@@ -58,7 +62,13 @@ const Video = () => {
       />
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
-        <img src="/images/video/shape.svg" alt="shape" className="w-full" />
+        {/* <img src="/images/video/shape.svg" alt="shape" className="w-full" /> */}
+        <Image
+          src="/images/video/shape.svg"
+          alt="shape"
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
     </section>
   );
