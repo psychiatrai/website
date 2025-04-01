@@ -17,7 +17,7 @@ const featuresData: Feature[] = [
       "We believe digital is a critical to scale well-being interventions and to bridge the treatment gap",
   },
   {
-    id: 1,
+    id: 2,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -32,7 +32,7 @@ const featuresData: Feature[] = [
       "Therapeutic alliance accounts for 90 % of a person's recovery. Our digital approach incorporates a human touch at every stage of your journey",
   },
   {
-    id: 1,
+    id: 3,
     icon: (
       <svg width="40" height="45" viewBox="0 0 40 45" className="fill-current">
         <path
@@ -47,7 +47,7 @@ const featuresData: Feature[] = [
       "No more waiting for one week to talk to your counselor. We aim to respond to your questions and feedback in near real time",
   },
   {
-    id: 1,
+    id: 4,
     icon: (
       <svg width="40" height="42" viewBox="0 0 40 42" className="fill-current">
         <path
@@ -62,7 +62,7 @@ const featuresData: Feature[] = [
       "For your more complex needs and follow-ups, you can schedule regular sessions with your counselor at your convenience",
   },
   {
-    id: 1,
+    id: 5,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -77,7 +77,7 @@ const featuresData: Feature[] = [
       "A strong monitoring suit can help our team provide you with early feedback and the appropriate interventions, making sure you stay on track",
   },
   {
-    id: 1,
+    id: 6,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
