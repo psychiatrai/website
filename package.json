@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/runtime": "^7.27.0",
     "@typescript-eslint/parser": "^8.28.0",
     "cross-spawn": "^7.0.6",
     "eslint": "^9.23.0",
@@ -22,6 +23,7 @@
     "react-modal-video": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.27.0",
     "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "autoprefixer": "^10.4.19",
@@ -34,5 +36,10 @@
   "engines": {
     "node": ">=20.15.0",
     "npm": ">=10.7.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/runtime": "7.27.0"
+    }
   }
 }
