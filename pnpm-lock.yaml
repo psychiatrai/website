@@ -4,12 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@babel/runtime': 7.27.0
+
 importers:
 
   .:
     dependencies:
       '@babel/runtime':
-        specifier: ^7.27.0
+        specifier: 7.27.0
         version: 7.27.0
       '@typescript-eslint/parser':
         specifier: ^8.28.0

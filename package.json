@@ -35,5 +35,10 @@
   "engines": {
     "node": ">=20.15.0",
     "npm": ">=10.7.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/runtime": "7.27.0"
+    }
   }
 }
