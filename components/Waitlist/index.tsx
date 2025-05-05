@@ -71,28 +71,34 @@ const Waitlist = () => {
     setNumberOfPractitioners(value);
   };
 
-  const updateEmail = useCallback(
-    debounce((value) => setEmail(value), 300),
-    []
-  );
+  const updateEmail = useCallback((value: string) => {
+    const debouncedSetEmail = debounce((val: string) => setEmail(val), 300);
+    debouncedSetEmail(value);
+  }, []);
 
- const updateLocation = useCallback(
-   debounce((value) => setLocation(value), 300),
-   []
- );
+  const updateLocation = useCallback((value: string) => {
+    const debouncedSetLocation = debounce(
+      (val: string) => setLocation(val),
+      300
+    );
+    debouncedSetLocation(value);
+  }, []);
 
+  const updateEducation = useCallback((value: string) => {
+    const debouncedSetEducation = debounce(
+      (val: string) => setEducation(val),
+      300
+    );
+    debouncedSetEducation(value);
+  }, []);
 
-  const updateEducation = useCallback(
-    debounce((value) => setEducation(value), 300),
-    []
-  );
-
-
-  const updateSuggestions = useCallback(
-    debounce((value) => setSuggestions(value), 300),
-    []
-  );
-
+  const updateSuggestions = useCallback((value: string) => {
+    const debouncedSetSuggestions = debounce(
+      (val: string) => setSuggestions(val),
+      300
+    );
+    debouncedSetSuggestions(value);
+  }, []);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {

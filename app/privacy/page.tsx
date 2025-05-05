@@ -12,7 +12,7 @@ const Privacy: React.FC = () => {
             1. Introduction
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-            At Psychiatrai, we are committed to protecting your privacy. This
+            At psychiatrai, we are committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and safeguard
             your personal information when you use our app and web-based mental
             health services platform in Pakistan.
@@ -107,7 +107,7 @@ const Privacy: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             We may update this Privacy Policy from time to time. Significant
             changes will be communicated via email or platform updates.
-            Continued use of Psychiatrai after changes signifies acceptance.
+            Continued use of psychiatrai after changes signifies acceptance.
           </p>
 
           <h2 className="mb-5 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
