@@ -4,42 +4,38 @@ import { useState } from "react";
 import Modal from "@/components/Common/Modal";
 
 const DeleteAccount: React.FC = () => {
-  const [url, setUrl] = useState("");
-  const [isValidUrl, setIsValidUrl] = useState(true);
+  const [email, setEmail] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(true);
   const [modalMessage, setModalMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const validateUrl = (urlString: string) => {
-    try {
-      new URL(urlString);
-      return true;
-    } catch {
-      return false;
-    }
+  const validateEmail = (emailString: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(emailString);
   };
 
-  const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setUrl(value);
+    setEmail(value);
     if (value) {
-      setIsValidUrl(validateUrl(value));
+      setIsValidEmail(validateEmail(value));
     } else {
-      setIsValidUrl(true);
+      setIsValidEmail(true);
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!url) {
-      setModalMessage("Please enter a valid URL.");
+    if (!email) {
+      setModalMessage("Please enter a valid email address.");
       setShowModal(true);
       return;
     }
 
-    if (!isValidUrl) {
-      setModalMessage("Please enter a valid URL format.");
+    if (!isValidEmail) {
+      setModalMessage("Please enter a valid email format.");
       setShowModal(true);
       return;
     }
@@ -52,14 +48,14 @@ const DeleteAccount: React.FC = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ url }),
+        body: JSON.stringify({ email }),
       });
 
       if (response.ok) {
         setModalMessage(
           "Your account deletion request has been submitted successfully. We will process your request and contact you within 7 business days."
         );
-        setUrl("");
+        setEmail("");
       } else {
         setModalMessage(
           "There was an error submitting your request. Please try again later."
@@ -124,25 +120,25 @@ const DeleteAccount: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
-                  htmlFor="url"
+                  htmlFor="email"
                   className="block text-sm font-medium text-black dark:text-white mb-2"
                 >
                   Your Email Address *
                 </label>
                 <input
                   type="email"
-                  id="url"
-                  value={url}
-                  onChange={handleUrlChange}
+                  id="email"
+                  value={email}
+                  onChange={handleEmailChange}
                   placeholder="Enter your registered email"
                   className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-[#242B51] dark:text-white ${
-                    !isValidUrl && url
+                    !isValidEmail && email
                       ? "border-red-500 focus:ring-red-500"
                       : "border-gray-300 dark:border-gray-600"
                   }`}
                   required
                 />
-                {!isValidUrl && url && (
+                {!isValidEmail && email && (
                   <p className="mt-1 text-sm text-red-500">
                     Please enter a valid email address
                   </p>
@@ -151,7 +147,7 @@ const DeleteAccount: React.FC = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting || !url || !isValidUrl}
+                disabled={isSubmitting || !email || !isValidEmail}
                 className="w-full bg-primary hover:bg-opacity-80 disabled:bg-opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-all duration-200"
               >
                 {isSubmitting ? "Submitting..." : "Delete My Account"}
