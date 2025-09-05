@@ -47,7 +47,6 @@ const DeleteAccount: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Since backend endpoint exists, we'll make the API call
       const response = await fetch("/api/delete-account-request", {
         method: "POST",
         headers: {
