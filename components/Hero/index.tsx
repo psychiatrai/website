@@ -25,14 +25,6 @@ const Hero = () => {
                   healing and recovery. We want to combine the two for maximum
                   clinical and cost-effectiveness.
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="/#waitlist"
-                    className="btn-primary rounded-md py-4 px-8 text-base font-semibold duration-300 ease-in-out"
-                  >
-                    Sign Up Now
-                  </Link>
-                </div>
               </div>
             </div>
           </div>

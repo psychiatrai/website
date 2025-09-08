@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import Modal from "../Common/Modal";
+import Modal from "../../components/Common/Modal";
 
 function debounce(func, delay) {
   let timer;
@@ -11,7 +11,7 @@ function debounce(func, delay) {
   };
 }
 
-const Waitlist = () => {
+export default function JoinPlatformPage() {
   const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
@@ -143,28 +143,33 @@ const Waitlist = () => {
   };
 
   return (
-    <section
-      id="waitlist"
-      className="overflow-hidden py-16 md:py-20 lg:py-28 px-4 lg:px-8"
-    >
+    <div className="min-h-screen bg-green-subtle dark:bg-dark">
       <Modal
         show={showModal}
         message={modalMessage}
         onClose={() => setShowModal(false)}
       />
-      <div className="container">
-        <div className="w-full px-4 lg:w-22/24 xl:w-23/24">
-          <div
-            className="wow fadeInUp mb-12 rounded-md bg-green-accent py-11 px-8 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px] backdrop-blur-sm"
-            data-wow-delay=".15s"
-          >
-            <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-              Join Our Waitlist
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+              Request to Join the Platform
+            </h1>
+            <p className="text-base !leading-relaxed text-body-color">
+              Join psychiatrai as a practitioner or organization to provide accessible mental health care.
+            </p>
+          </div>
+
+          {/* Application Form */}
+          <div className="card-brand p-8">
+            <h2 className="mb-6 text-2xl font-bold !leading-tight text-black dark:text-white sm:text-3xl">
+              Submit Your Application
             </h2>
-            <p className="mb-12 text-base font-medium text-body-color">
-              Please fill out the form below to be added to our waitlist.
-              We&apos;ll get back to you ASAP. Filling in the optional questions
-              can help in qualifying for early access and its associated perks.
+            <p className="mb-8 text-base !leading-relaxed text-body-color">
+              Fill out the form below to express your interest in joining our platform. 
+              We&apos;ll review your application and get back to you as soon as possible.
             </p>
             <form
               onSubmit={(e) => {
@@ -187,192 +192,11 @@ const Waitlist = () => {
                     className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                   >
                     <option value="">Select Role</option>
-                    <option value="patient">Patient</option>
                     <option value="practitioner">Practitioner</option>
                     <option value="organization">Organization</option>
                   </select>
                 </div>
 
-                {role === "patient" && (
-                  <>
-                    <div className="w-full px-4 mb-8">
-                      <label
-                        htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Email*
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                        onChange={(e) => updateEmail(e.target.value)}
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      />
-                    </div>
-                    <div className="w-full px-4 mb-8">
-                      <label
-                        htmlFor="country"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Country/Location*
-                      </label>
-                      <input
-                        type="text"
-                        id="country"
-                        placeholder="Enter your country or location"
-                        required
-                        onChange={(e) => updateLocation(e.target.value)}
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      />
-                    </div>
-                    <div className="w-full px-4 mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                        Please select the condition(s) that you need help with
-                      </label>
-                      <div className="flex flex-wrap gap-4">
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="anxiety"
-                            checked={conditions.includes("anxiety")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Anxiety</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="depression"
-                            checked={conditions.includes("depression")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Depression</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="bipolar"
-                            checked={conditions.includes("bipolar")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Bipolar Disorder</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="ptsd"
-                            checked={conditions.includes("ptsd")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Post-Traumatic Stress Disorder (PTSD)</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="ocd"
-                            checked={conditions.includes("ocd")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Obsessive-Compulsive Disorder (OCD)</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="eating_disorders"
-                            checked={conditions.includes("eating_disorders")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Eating Disorders</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="addiction"
-                            checked={conditions.includes("addiction")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Addiction</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="personality_disorders"
-                            checked={conditions.includes(
-                              "personality_disorders"
-                            )}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Personality Disorders</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="stress_management"
-                            checked={conditions.includes("stress_management")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Stress Management</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="anger_management"
-                            checked={conditions.includes("anger_management")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Anger Management</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="trauma"
-                            checked={conditions.includes("trauma")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Trauma</span>
-                        </label>
-                        <label className="flex items-center space-x-3">
-                          <input
-                            type="checkbox"
-                            value="others"
-                            checked={conditions.includes("others")}
-                            onChange={handleConditionChange}
-                            className="h-5 w-5 text-primary focus:ring-primary dark:bg-[#242B51] dark:focus:ring-primary"
-                          />
-                          <span>Others</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="w-full px-4 mb-8">
-                      <label
-                        htmlFor="features"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        What features would you like in the platform?
-                      </label>
-                      <textarea
-                        id="features"
-                        placeholder="Enter your suggestions"
-                        onChange={(e) => updateSuggestions(e.target.value)}
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                        rows={6}
-                      ></textarea>
-                    </div>
-                  </>
-                )}
 
                 {role === "practitioner" && (
                   <>
@@ -720,16 +544,27 @@ const Waitlist = () => {
 
                 <div className="w-full px-4">
                   <button className="btn-primary rounded-md py-4 px-9 text-base font-medium transition duration-300 ease-in-out hover:shadow-signUp">
-                    Submit
+                    Request to Join
                   </button>
                 </div>
               </div>
             </form>
           </div>
+
+          {/* Contact Information */}
+          <div className="mt-8 text-center">
+            <p className="text-base text-body-color">
+              Questions? Contact us at{" "}
+              <a
+                href="mailto:info@psychiatr.ai"
+                className="text-primary hover:text-primary-light transition-colors"
+              >
+                info@psychiatr.ai
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Waitlist;
+}
