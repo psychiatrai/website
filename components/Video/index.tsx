@@ -10,7 +10,7 @@ const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 py-16 md:py-20 lg:py-28 bg-green-accent">
       <div className="container">
         <SectionTitle
           title="We are ready to help"
@@ -34,7 +34,7 @@ const Video = () => {
                 <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
                   <button
                     onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
+                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-secondary transition hover:bg-opacity-100 hover:scale-110 hover:text-primary"
                   >
                     <svg
                       width="16"

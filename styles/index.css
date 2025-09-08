@@ -30,4 +30,120 @@
   input#checkboxLabel:checked ~ .box span {
     @apply opacity-100;
   }
+
+  /* Custom brand color utilities */
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #5D63AA 0%, #B2CAAC 100%);
+  }
+
+  .bg-primary-gradient {
+    background: linear-gradient(135deg, #5D63AA 0%, #9999FF 100%);
+  }
+
+  .bg-secondary-gradient {
+    background: linear-gradient(135deg, #B2CAAC 0%, #D8F0D4 100%);
+  }
+
+  .text-brand-gradient {
+    background: linear-gradient(135deg, #5D63AA 0%, #B2CAAC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Enhanced button styles */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  /* Card styles - balanced for dark mode */
+  .card-brand {
+    @apply bg-white dark:bg-dark/95 rounded-xl shadow-lg border border-green hover:shadow-xl transition-all duration-300 backdrop-blur-sm;
+  }
+
+  /* Page background styles - balanced for dark mode */
+  .page-bg-light {
+    @apply bg-secondary-lighter/40 dark:bg-dark;
+  }
+
+  .page-bg-dark {
+    @apply dark:bg-dark;
+  }
+
+  /* Section backgrounds */
+  .section-bg-primary {
+    @apply bg-primary-lighter/15;
+  }
+
+  .section-bg-secondary {
+    @apply bg-secondary-lighter/30;
+  }
+
+  /* Green-focused utilities - balanced for dark mode */
+  .bg-green-subtle {
+    @apply bg-secondary-lighter/50 dark:bg-dark;
+  }
+
+  .bg-green-accent {
+    @apply bg-secondary-light/60 dark:bg-dark;
+  }
+
+  .border-green {
+    @apply border-secondary-light/40 dark:border-secondary/30;
+  }
+
+  .text-green-accent {
+    @apply text-secondary dark:text-secondary-light;
+  }
+
+  /* Mixed color backgrounds - dark mode optimized */
+  .bg-mixed-gradient {
+    background: linear-gradient(135deg, #EDF5EB 0%, #D1D1F8 50%, #EDF5EB 100%);
+  }
+
+  .bg-mixed-gradient-dark {
+    background: linear-gradient(135deg, #1D2144 0%, #2A2F5A 50%, #1D2144 100%);
+  }
+
+  .bg-green-blue-gradient {
+    background: linear-gradient(135deg, #B2CAAC 0%, #5D63AA 100%);
+  }
+
+  .bg-green-blue-gradient-dark {
+    background: linear-gradient(135deg, #2A2F5A 0%, #1D2144 100%);
+  }
+
+  /* Dark mode specific utilities - balanced approach */
+  .dark-mode-bg {
+    @apply bg-white dark:bg-dark;
+  }
+
+  .dark-mode-card {
+    @apply bg-white dark:bg-dark/95 border-gray-200 dark:border-gray-700;
+  }
+
+  .dark-mode-text {
+    @apply text-black dark:text-white;
+  }
+
+  .dark-mode-subtle {
+    @apply text-body-color dark:text-gray-300;
+  }
+
+  /* Strategic green accents for dark mode */
+  .bg-green-dark-subtle {
+    @apply bg-secondary-lighter/50 dark:bg-dark;
+  }
+
+  .bg-green-dark-accent {
+    @apply bg-secondary-light/60 dark:bg-dark;
+  }
+
+  .bg-green-dark-card {
+    @apply bg-white dark:bg-dark/95;
+  }
 }

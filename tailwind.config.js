@@ -17,9 +17,22 @@ module.exports = {
       white: "#FFFFFF",
       black: "#090E34",
       dark: "#1D2144",
-      primary: "#4A6CF7",
-      yellow: "#FBB040",
-      "body-color": "#959CB1",
+      // Primary brand colors
+      primary: "#5D63AA",
+      "primary-light": "#9999FF",
+      "primary-lighter": "#D1D1F8",
+      // Secondary brand colors
+      secondary: "#B2CAAC",
+      "secondary-light": "#D8F0D4",
+      "secondary-lighter": "#EDF5EB",
+      // Dark mode green variants
+      "green-dark": "#2D4A3A",
+      "green-dark-light": "#3A5A47",
+      "green-dark-lighter": "#4A6B55",
+      // Accent colors
+      accent: "#FBB040",
+      "body-color": "#6B7280",
+      "body-color-light": "#9CA3AF",
     },
     screens: {
       xs: "450px",
