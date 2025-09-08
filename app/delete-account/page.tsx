@@ -51,15 +51,13 @@ const DeleteAccount: React.FC = () => {
         body: JSON.stringify({ email }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
-        setModalMessage(
-          "Your account deletion request has been submitted successfully. We will process your request and contact you within 7 business days."
-        );
+        setModalMessage(data.message || "Your account deletion request has been submitted successfully.");
         setEmail("");
       } else {
-        setModalMessage(
-          "There was an error submitting your request. Please try again later."
-        );
+        setModalMessage(data.message || data.error || "There was an error submitting your request. Please try again later.");
       }
     } catch (error) {
       setModalMessage(
@@ -150,6 +148,18 @@ const DeleteAccount: React.FC = () => {
                 {isSubmitting ? "Submitting..." : "Submit Request"}
               </button>
             </form>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-base text-body-color">
+              Questions? Contact us at{" "}
+              <a
+                href="mailto:compliance@psychiatr.ai"
+                className="text-primary hover:text-primary-light transition-colors"
+              >
+                compliance@psychiatr.ai
+              </a>
+            </p>
           </div>
         </div>
       </div>

@@ -75,17 +75,15 @@ const DeleteData: React.FC = () => {
         }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
-        setModalMessage(
-          "Your data deletion request has been submitted successfully. We will process your request within 30 days and send you a confirmation email once completed."
-        );
+        setModalMessage(data.message || "Your data deletion request has been submitted successfully.");
         setEmail("");
         setDataTypes([]);
         setReason("");
       } else {
-        setModalMessage(
-          "There was an error submitting your request. Please try again later or contact our support team."
-        );
+        setModalMessage(data.message || data.error || "There was an error submitting your request. Please try again later or contact our support team.");
       }
     } catch (error) {
       setModalMessage(
@@ -243,6 +241,18 @@ const DeleteData: React.FC = () => {
                 {isSubmitting ? "Submitting..." : "Submit Request"}
               </button>
             </form>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-base text-body-color">
+              Questions? Contact us at{" "}
+              <a
+                href="mailto:compliance@psychiatr.ai"
+                className="text-primary hover:text-primary-light transition-colors"
+              >
+                compliance@psychiatr.ai
+              </a>
+            </p>
           </div>
         </div>
       </div>
