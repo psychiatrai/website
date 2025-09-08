@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Terms: React.FC = () => {
   return (
-    <div className="bg-primary bg-opacity-5 text-justify min-h-screen py-16">
+    <div className="bg-green-subtle text-justify min-h-screen py-16">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl text-center font-bold text-primary mb-8">
+        <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight text-center">
           Terms and Conditions
         </h1>
         <div className="prose max-w-3xl mx-auto text-body-color">

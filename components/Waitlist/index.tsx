@@ -155,7 +155,7 @@ const Waitlist = () => {
       <div className="container">
         <div className="w-full px-4 lg:w-22/24 xl:w-23/24">
           <div
-            className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+            className="wow fadeInUp mb-12 rounded-md bg-green-accent py-11 px-8 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px] backdrop-blur-sm"
             data-wow-delay=".15s"
           >
             <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
@@ -719,7 +719,7 @@ const Waitlist = () => {
                 )}
 
                 <div className="w-full px-4">
-                  <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                  <button className="btn-primary rounded-md py-4 px-9 text-base font-medium transition duration-300 ease-in-out hover:shadow-signUp">
                     Submit
                   </button>
                 </div>

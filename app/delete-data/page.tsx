@@ -103,21 +103,18 @@ const DeleteData: React.FC = () => {
   };
 
   return (
-    <div className="bg-primary bg-opacity-5 min-h-screen py-16">
+    <div className="bg-green-subtle min-h-screen py-16">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl text-center font-bold text-primary mb-8">
-          Delete My Data
-        </h1>
 
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white dark:bg-dark rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="mb-4 text-xl font-bold text-black dark:text-white">
-              Psychiatrai - Delete My Data
+          <div className="card-brand p-6 mb-6">
+            <h2 className="mb-4 text-2xl font-bold !leading-tight text-black dark:text-white sm:text-3xl">
+              Request data deletion from the psychiatrai platform
             </h2>
 
-            <div className="space-y-4 text-body-color text-sm">
+            <div className="space-y-4 text-base !leading-relaxed text-body-color">
               <div>
-                <p className="font-medium text-black dark:text-white mb-2">
+                <p className="font-semibold text-black dark:text-white mb-2">
                   Steps:
                 </p>
                 <ol className="list-decimal list-inside space-y-1">
@@ -128,26 +125,26 @@ const DeleteData: React.FC = () => {
               </div>
 
               <div>
-                <p className="font-medium text-black dark:text-white mb-2">
+                <p className="font-semibold text-black dark:text-white mb-2">
                   Retention:
                 </p>
-                <p>
+                <p className="mb-2">
                   <strong>Deleted:</strong> Personal info, payments, usage data
                 </p>
                 <p>
-                  <strong>Retained:</strong> Legal compliance (7 years),
-                  anonymized research (30 days)
+                  <strong>Retained:</strong> Legal compliance records (up to 2 years),
+                  anonymized research data (30 days)
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white dark:bg-dark rounded-lg shadow-lg p-6">
+          <div className="card-brand p-6">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-black dark:text-white mb-2"
+                  className="block text-base font-semibold text-black dark:text-white mb-2"
                 >
                   Email Address *
                 </label>
@@ -157,7 +154,7 @@ const DeleteData: React.FC = () => {
                   value={email}
                   onChange={handleEmailChange}
                   placeholder="your@email.com"
-                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-[#242B51] dark:text-white ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-[#242B51] dark:text-white text-base ${
                     !isValidEmail && email
                       ? "border-red-500 focus:ring-red-500"
                       : "border-gray-300 dark:border-gray-600"
@@ -165,7 +162,7 @@ const DeleteData: React.FC = () => {
                   required
                 />
                 {!isValidEmail && email && (
-                  <p className="mt-1 text-sm text-red-500">
+                  <p className="mt-1 text-base text-red-500">
                     Please enter a valid email address
                   </p>
                 )}
@@ -193,7 +190,7 @@ const DeleteData: React.FC = () => {
                         onChange={handleDataTypeChange}
                         className="mr-3 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
                       />
-                      <span className="text-sm text-body-color dark:text-gray-300">
+                      <span className="text-base text-body-color dark:text-gray-300">
                         {dataType}
                       </span>
                     </label>
@@ -204,7 +201,7 @@ const DeleteData: React.FC = () => {
               <div>
                 <label
                   htmlFor="reason"
-                  className="block text-sm font-medium text-black dark:text-white mb-2"
+                  className="block text-base font-semibold text-black dark:text-white mb-2"
                 >
                   Reason (Optional)
                 </label>
@@ -214,7 +211,7 @@ const DeleteData: React.FC = () => {
                   onChange={(e) => setReason(e.target.value)}
                   placeholder="Why do you want to delete this data?"
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-[#242B51] dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-[#242B51] dark:text-white text-base"
                 />
               </div>
 
@@ -226,7 +223,7 @@ const DeleteData: React.FC = () => {
                     onChange={(e) => setConfirmUnderstand(e.target.checked)}
                     className="mr-3 mt-1 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
                   />
-                  <span className="text-sm text-body-color">
+                  <span className="text-base text-body-color">
                     I understand this deletion is permanent and cannot be undone
                   </span>
                 </label>
@@ -241,7 +238,7 @@ const DeleteData: React.FC = () => {
                   dataTypes.length === 0 ||
                   !confirmUnderstand
                 }
-                className="w-full bg-primary hover:bg-opacity-80 disabled:bg-opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-all duration-200"
+                className="btn-primary w-full disabled:bg-opacity-50 disabled:cursor-not-allowed py-4 px-8 text-base"
               >
                 {isSubmitting ? "Submitting..." : "Delete My Data"}
               </button>
