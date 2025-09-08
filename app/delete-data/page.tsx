@@ -238,9 +238,9 @@ const DeleteData: React.FC = () => {
                   dataTypes.length === 0 ||
                   !confirmUnderstand
                 }
-                className="btn-primary w-full disabled:bg-opacity-50 disabled:cursor-not-allowed py-4 px-8 text-base"
+                className="w-full bg-primary hover:bg-opacity-80 disabled:bg-opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 text-base"
               >
-                {isSubmitting ? "Submitting..." : "Delete My Data"}
+                {isSubmitting ? "Submitting..." : "Submit Request"}
               </button>
             </form>
           </div>
