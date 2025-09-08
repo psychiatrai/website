@@ -43,7 +43,7 @@ const DeleteAccount: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/delete-account-request", {
+      const response = await fetch("https://api.psychiatr.ai/v1/delete-account-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

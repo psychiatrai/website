@@ -63,7 +63,7 @@ const DeleteData: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/delete-data-request", {
+      const response = await fetch("https://api.psychiatr.ai/v1/delete-data-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
