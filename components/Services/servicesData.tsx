@@ -1,4 +1,5 @@
 import { Service } from "@/types/service";
+import { SERVICE_INFO } from "@/constants";
 
 const servicesData: Service[] = [
   {
@@ -10,11 +11,11 @@ const servicesData: Service[] = [
         <circle cx="20" cy="20" r="4" />
       </svg>
     ),
-    title: "Individual Therapy Sessions",
-    paragraph:
-      "One-on-one therapy sessions with licensed mental health professionals. Personalized treatment plans tailored to your specific needs and goals.",
-    price: "PKR 2,500/session",
-    duration: "50 minutes",
+    title: SERVICE_INFO.name,
+    paragraph: SERVICE_INFO.description,
+    price: SERVICE_INFO.price,
+    duration: SERVICE_INFO.duration,
+    delivery: SERVICE_INFO.delivery,
   },
 ];
 
