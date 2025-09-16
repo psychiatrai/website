@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { COMPANY_INFO, POLICY_INFO } from "@/constants";
 
 const Terms: React.FC = () => {
   return (
@@ -12,10 +13,10 @@ const Terms: React.FC = () => {
             1. Introduction
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-            Welcome to psychiatrai, an app and web-based mental health services
+            Welcome to {COMPANY_INFO.name}, an app and web-based mental health services
             platform specifically intended to offer mental health support,
             consultation, and related resources to users in Pakistan. By
-            accessing or using psychiatrai, you agree to be bound by these Terms
+            accessing or using {COMPANY_INFO.name}, you agree to be bound by these Terms
             and Conditions.
           </p>
 
@@ -23,7 +24,7 @@ const Terms: React.FC = () => {
             2. Acceptance of Terms
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-            Your use of psychiatrai signifies your acceptance and agreement to
+            Your use of {COMPANY_INFO.name} signifies your acceptance and agreement to
             these Terms. If you do not agree with these Terms, you must
             discontinue your use of our platform immediately.
           </p>
@@ -32,8 +33,8 @@ const Terms: React.FC = () => {
             3. Eligibility
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-            psychiatrai is available exclusively to individuals aged 18 years or
-            older residing in Pakistan. By using psychiatrai, you confirm that
+            {COMPANY_INFO.name} is available exclusively to individuals aged 18 years or
+            older residing in Pakistan. By using {COMPANY_INFO.name}, you confirm that
             you meet these eligibility requirements.
           </p>
 
@@ -197,20 +198,23 @@ const Terms: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             For any queries related to these Terms, contact us at:
           </p>
-          <ul className="list-disc pl-6">
+          <ul className="list-disc mt-2 pl-6 mb-4">
             <li>
               Email:{" "}
               <a
-                href="mailto:compliance@psychiatr.ai"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${COMPANY_INFO.email.legal}`}
+                className="text-primary hover:underline"
               >
-                compliance@psychiatr.ai
+                {COMPANY_INFO.email.legal}
               </a>
             </li>
-
-            <li>Phone: +923028448040</li>
+            <li>Phone: {COMPANY_INFO.phone}</li>
+            <li>Address: {COMPANY_INFO.address}</li>
           </ul>
+
+          <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
+            <strong>Last updated:</strong> {POLICY_INFO.lastUpdated}
+          </p>
 
           <div className="mt-8 p-6 bg-white dark:bg-dark/90 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="text-lg font-semibold text-black dark:text-white mb-4">
@@ -240,6 +244,15 @@ const Terms: React.FC = () => {
                 Request Account Deletion
               </Link>
             </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/"
+              className="inline-block rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+            >
+              Back to Home
+            </Link>
           </div>
         </div>
       </div>
