@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { COMPANY_INFO, POLICY_INFO } from "@/constants";
 
 const RefundPolicy: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const RefundPolicy: React.FC = () => {
             1. Overview
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-            At psychiatrai, we are committed to providing high-quality mental
+            At {COMPANY_INFO.name}, we are committed to providing high-quality mental
             health services. This Return & Refund Policy outlines the terms and
             conditions for refunds and cancellations of our digital mental
             health services in Pakistan.
@@ -43,10 +44,10 @@ const RefundPolicy: React.FC = () => {
             <li>
               Contact our support team at{" "}
               <a
-                href="mailto:refunds@psychiatr.ai"
+                href={`mailto:${COMPANY_INFO.email.refunds}`}
                 className="text-primary hover:underline"
               >
-                refunds@psychiatr.ai
+                {COMPANY_INFO.email.refunds}
               </a>
             </li>
             <li>Provide your booking reference number and reason for refund</li>
@@ -99,14 +100,14 @@ const RefundPolicy: React.FC = () => {
             <li>
               Email:{" "}
               <a
-                href="mailto:refunds@psychiatr.ai"
+                href={`mailto:${COMPANY_INFO.email.refunds}`}
                 className="text-primary hover:underline"
               >
-                refunds@psychiatr.ai
+                {COMPANY_INFO.email.refunds}
               </a>
             </li>
-            <li>Phone: +92-21-1234-5678</li>
-            <li>Address: I-8 Markaz, Islamabad, Pakistan</li>
+            <li>Phone: {COMPANY_INFO.phone}</li>
+            <li>Address: {COMPANY_INFO.address}</li>
           </ul>
 
           <h2 className="mb-5 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
@@ -120,7 +121,7 @@ const RefundPolicy: React.FC = () => {
           </p>
 
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-            <strong>Last updated:</strong> September 2025
+            <strong>Last updated:</strong> {POLICY_INFO.lastUpdated}
           </p>
 
           <div className="mt-8 text-center">
