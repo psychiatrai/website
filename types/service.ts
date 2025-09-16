@@ -5,4 +5,5 @@ export type Service = {
   paragraph: string;
   price?: string;
   duration?: string;
+  delivery?: string;
 };

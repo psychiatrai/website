@@ -1,15 +1,6 @@
 import SectionTitle from "../Common/SectionTitle";
 import { SERVICE_INFO } from "@/constants";
-
-type Service = {
-  id: number;
-  icon: JSX.Element;
-  title: string;
-  paragraph: string;
-  price?: string;
-  duration?: string;
-  delivery?: string;
-};
+import { Service } from "@/types/service";
 
 const SingleService = ({ service }: { service: Service }) => {
   const { icon, title, paragraph, price, duration, delivery } = service;
