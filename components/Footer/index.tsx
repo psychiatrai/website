@@ -34,14 +34,10 @@ const Footer = () => {
                 </p>
                 <div className="mb-6 text-sm text-body-color">
                   <p className="mb-2">
-                    <strong>Office Address:</strong><br />
                     {COMPANY_INFO.address}
                   </p>
                   <p className="mb-2">
                     <strong>Phone:</strong> {COMPANY_INFO.phone}
-                  </p>
-                  <p className="mb-2">
-                    <strong>Emergency:</strong> {COMPANY_INFO.emergencyPhone} (24/7)
                   </p>
                 </div>
                 <div className="flex items-center">
@@ -148,7 +144,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/privacy" 
+                      href="/privacy"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       Privacy Policy

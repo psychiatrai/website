@@ -65,7 +65,7 @@ const ServicePolicy: React.FC = () => {
           <ul className="list-disc mt-2 pl-6 mb-4">
             <li>Sessions begin promptly at the scheduled time</li>
             <li>Late arrivals may result in shortened session duration</li>
-            <li>Sessions will conclude at the designated end time</li>
+            <li>Sessions will conclude at the designated end time, but could be shorter or longer based on practitioner discretion</li>
             <li>
               Follow-up materials or assignments may be provided post-session
             </li>
@@ -87,8 +87,7 @@ const ServicePolicy: React.FC = () => {
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             Our services are primarily available to clients within Pakistan.
-            International clients may be accommodated on a case-by-case basis,
-            subject to licensing and regulatory requirements.
+            International clients may be accommodated on a case-by-case basis.
           </p>
 
           <h2 className="mb-5 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
@@ -119,7 +118,7 @@ const ServicePolicy: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             For mental health emergencies, clients should contact local
             emergency services immediately. Our service is not designed for
-            crisis intervention. Emergency contact numbers and resources will be
+            crisis intervention. Contact numbers and resources will be
             provided to all clients during onboarding.
           </p>
 
@@ -140,7 +139,6 @@ const ServicePolicy: React.FC = () => {
               </a>
             </li>
             <li>Phone: {COMPANY_INFO.phone}</li>
-            <li>Emergency: {COMPANY_INFO.emergencyPhone}</li>
             <li>Address: {COMPANY_INFO.address}</li>
           </ul>
 

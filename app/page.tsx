@@ -1,7 +1,6 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import Video from "@/components/Video";
 import { Inter } from "next/font/google";
 import Link from "next/link";
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <Video />
       <Features />
-      <Services />
       
       {/* Web App Access Section */}
       <section className="overflow-hidden py-16 md:py-20 lg:py-28 px-4 lg:px-8">

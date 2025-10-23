@@ -50,7 +50,7 @@ const RefundPolicy: React.FC = () => {
                 {COMPANY_INFO.email.refunds}
               </a>
             </li>
-            <li>Provide your booking reference number and reason for refund</li>
+            <li>Provide your appoint details (practitioner name, date, time) and reason for refund</li>
             <li>Refunds will be processed within 5-7 business days</li>
             <li>Refunds will be credited to the original payment method</li>
           </ul>
@@ -72,12 +72,10 @@ const RefundPolicy: React.FC = () => {
             If a session is cancelled by our mental health practitioner:
           </p>
           <ul className="list-disc mt-2 pl-6 mb-4">
-            <li>Full refund will be provided immediately</li>
             <li>
               Alternative appointment slots will be offered at no additional
-              cost
+              cost or full refund as per client discretion
             </li>
-            <li>Compensation may be provided for any inconvenience caused</li>
           </ul>
 
           <h2 className="mb-5 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">

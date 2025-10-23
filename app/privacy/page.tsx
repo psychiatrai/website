@@ -121,10 +121,10 @@ const Privacy: React.FC = () => {
             <li>
               Email:{" "}
               <a
-                href={`mailto:${COMPANY_INFO.email.privacy}`}
+                href={`mailto:${COMPANY_INFO.email.compliance}`}
                 className="text-primary hover:underline"
               >
-                {COMPANY_INFO.email.privacy}
+                {COMPANY_INFO.email.compliance}
               </a>
             </li>
             <li>Phone: {COMPANY_INFO.phone}</li>
