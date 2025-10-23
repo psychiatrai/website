@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { COMPANY_INFO } from "@/constants";
 
 const Footer = () => {
   return (
@@ -28,9 +29,17 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
-                <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
+                <p className="mb-6 text-base font-medium leading-relaxed text-body-color">
                   Scalable digital mental healthcare
                 </p>
+                <div className="mb-6 text-sm text-body-color">
+                  <p className="mb-2">
+                    {COMPANY_INFO.address}
+                  </p>
+                  <p className="mb-2">
+                    <strong>Phone:</strong> {COMPANY_INFO.phone}
+                  </p>
+                </div>
                 <div className="flex items-center">
                   <Link
                     href="https://www.facebook.com/psychiatrai"
@@ -121,23 +130,40 @@ const Footer = () => {
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
+                <h3 className="mb-9 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  Legal & Policies
+                </h3>
                 <ul>
                   <li>
                     <Link
                       href="/terms-and-conditions"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Terms of Use{" "}
+                      Terms of Use
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/privacy" 
+                      href="/privacy"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Privacy Policy{" "}
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/refund-policy"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      Return & Refund Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/service-policy"
+                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
+                    >
+                      Service Delivery Policy
                     </Link>
                   </li>
                 </ul>

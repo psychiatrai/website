@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { COMPANY_INFO, POLICY_INFO } from "@/constants";
 
 const Privacy: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Privacy: React.FC = () => {
             1. Introduction
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-            At psychiatrai, we are committed to protecting your privacy. This
+            At {COMPANY_INFO.name}, we are committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and safeguard
             your personal information when you use our app and web-based mental
             health services platform in Pakistan.
@@ -24,7 +25,7 @@ const Privacy: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             We may collect the following types of information:
           </p>
-          <ul className="list-disc mt-2 pl-6">
+          <ul className="list-disc mt-2 pl-6 mb-4">
             <li>
               <strong>Personal Information</strong>: Name, email address, phone
               number, and other details you provide during account registration
@@ -48,7 +49,7 @@ const Privacy: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             We use your information to:
           </p>
-          <ul className="list-disc mt-2 pl-6">
+          <ul className="list-disc mt-2 pl-6 mb-4">
             <li>Provide and improve our mental health services.</li>
             <li>Facilitate communication with Providers.</li>
             <li>Process payments and manage accounts.</li>
@@ -61,7 +62,7 @@ const Privacy: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             We may share your information with:
           </p>
-          <ul className="list-disc mt-2 pl-6">
+          <ul className="list-disc mt-2 pl-6 mb-4">
             <li>Licensed Providers to deliver services.</li>
             <li>
               Third-party service providers for payment processing or analytics,
@@ -81,19 +82,19 @@ const Privacy: React.FC = () => {
             100% secure, and we cannot guarantee absolute security.
           </p>
 
-          <h2 className="mb-4 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+          <h2 className="mb-5 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
             6. Your Rights
           </h2>
-          <p className="mb-2 pr-[10px] text-base font-medium leading-relaxed text-body-color">
+          <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             You have the right to:
           </p>
-          <ul className="list-disc  pl-6">
+          <ul className="list-disc mt-2 pl-6 mb-4">
             <li>Access, correct, or delete your personal information.</li>
             <li>Opt out of non-essential communications.</li>
             <li>Request information about how your data is used.</li>
           </ul>
 
-          <h2 className="mb-4 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+          <h2 className="mb-5 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
             7. Cookies and Tracking
           </h2>
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
@@ -107,7 +108,7 @@ const Privacy: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             We may update this Privacy Policy from time to time. Significant
             changes will be communicated via email or platform updates.
-            Continued use of psychiatrai after changes signifies acceptance.
+            Continued use of {COMPANY_INFO.name} after changes signifies acceptance.
           </p>
 
           <h2 className="mb-5 text-xl mt-4 font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
@@ -116,21 +117,25 @@ const Privacy: React.FC = () => {
           <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             For questions about this Privacy Policy, contact us at:
           </p>
-          <ul className="list-disc pl-6">
+          <ul className="list-disc mt-2 pl-6 mb-4">
             <li>
               Email:{" "}
               <a
-                href="mailto:compliance@psychiatr.ai"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${COMPANY_INFO.email.compliance}`}
+                className="text-primary hover:underline"
               >
-                compliance@psychiatr.ai
+                {COMPANY_INFO.email.compliance}
               </a>
             </li>
-            <li>Phone: +923028448040</li>
+            <li>Phone: {COMPANY_INFO.phone}</li>
+            <li>Address: {COMPANY_INFO.address}</li>
           </ul>
 
-          <p className="mt-6">
+          <p className="mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
+            <strong>Last updated:</strong> {POLICY_INFO.lastUpdated}
+          </p>
+
+          <p className="mt-6 mb-4 pr-[10px] text-base font-medium leading-relaxed text-body-color">
             For more details on our terms of use, see our{" "}
             <Link
               href="/terms-and-conditions"
@@ -162,6 +167,15 @@ const Privacy: React.FC = () => {
                 Request Account Deletion
               </Link>
             </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/"
+              className="inline-block rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+            >
+              Back to Home
+            </Link>
           </div>
         </div>
       </div>
