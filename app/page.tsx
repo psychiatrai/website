@@ -1,7 +1,7 @@
-import ScrollUp from "@/components/Common/ScrollUp";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
-import Video from "@/components/Video";
+import ScrollUp from "../components/Common/ScrollUp";
+import Features from "../components/Features";
+import Hero from "../components/Hero";
+import Video from "../components/Video";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Modal from "@/components/Common/Modal";
+import Modal from "../../components/Common/Modal";
 
 const DeleteAccount: React.FC = () => {
   const [email, setEmail] = useState("");

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { COMPANY_INFO } from "@/constants";
+import { COMPANY_INFO } from "../../constants";
 
 const Footer = () => {
   return (
