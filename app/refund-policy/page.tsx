@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { COMPANY_INFO, POLICY_INFO } from "@/constants";
+import { COMPANY_INFO, POLICY_INFO } from "../../constants";
 
 const RefundPolicy: React.FC = () => {
   return (
