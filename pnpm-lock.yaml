@@ -36,6 +36,9 @@ importers:
       nanoid:
         specifier: ^5.1.5
         version: 5.1.5
+      next:
+        specifier: 15.5.10
+        version: 15.5.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -58,9 +61,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.39)
-      next:
-        specifier: 15.5.10
-        version: 15.5.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
       postcss:
         specifier: ^8.4.39
         version: 8.4.39
